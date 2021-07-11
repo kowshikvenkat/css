@@ -1,0 +1,65 @@
+
+#logo{
+  
+height: 255px;
+
+text-align: center;
+background-color: rgb(236, 206, 181);
+}
+#dogs{
+   position: relative;
+ height: 400px;    
+text-align: center;
+margin-left: 112px;
+margin-right: 112px;
+background-color: rgb(236, 206, 181);
+}
+#labrador{
+position: absolute; 
+top: 5%;
+left: 13%;
+width: 200px;
+height: 200px;
+background-image: url(labrador.png);
+background-size: cover;  
+cursor: pointer;
+border-radius: 40px;
+}
+#labrador::before,
+#labrador::after{
+   --scale:0;
+  
+position:absolute;
+top:-.25rem;
+left: 50%;
+transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+transition: 150ms transform;
+transform-origin: bottom center;
+}
+#labrador::before{
+content: attr(data-tooltip);
+color: white;
+padding: .5rem;
+width: max-content;
+background:black;
+border-radius:10px;
+}
+#labrador:hover::before
+{
+--scale:1;
+}
+
+#german{
+position: absolute; 
+top: 5%;
+right: 11.5%;
+width: 200px;
+height: 200px;
+background-image: url(germannn.png); 
+background-size: cover;
+cursor: pointer;
+border-radius: 40px;
+}
+#german:hover::before{
+   content:attr(data-tooltip);
+}
